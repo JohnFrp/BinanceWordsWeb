@@ -46,7 +46,7 @@ document.getElementById("fetchButton").addEventListener("click", async () => {
         } else {
             for (const [length, words] of Object.entries(groupedWords)) {
                 const section = document.createElement("div");
-                section.innerHTML = `<h3>${length}-Letter Words:</h3><ul>${words.map(word => `<li>${word}</li>`).join("")}</ul>`;
+                section.innerHTML = `<h3>${length} - Letter Words:</h3><ul>${words.map(word => `<li>${word}</li>`).join("")}</ul>`;
                 output.appendChild(section);
             }
         }
