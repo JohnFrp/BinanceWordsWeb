@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Filter Application</h1>
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" placeholder="Enter website URL" value="https://shoptips24.com/binance-word-of-the-day-answer-today">
+        <label for="minLength">Min Word Length:</label>
+        <input type="number" id="minLength" value="3">
+        <label for="maxLength">Max Word Length:</label>
+        <input type="number" id="maxLength" value="8">
+        <button id="fetchButton">Fetch Words</button>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
