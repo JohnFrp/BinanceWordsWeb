@@ -71,6 +71,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  ;
 }
 
 .bg {
@@ -103,81 +104,22 @@ button:hover {
 
 @keyframes blob-bounce {
   0% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
 
   25% {
-      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
   }
 
   50% {
-      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
   }
 
   75% {
-      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
   }
 
   100% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container {
-      width: 90%;
-      margin: 20px auto;
-      padding: 20px;
-  }
-
-  .card {
-      width: 100%;
-      height: auto;
-  }
-
-  .bg {
-      width: 100%;
-      height: auto;
-  }
-
-  .blob {
-      width: 400px;
-      height: 450px;
-  }
-
-  input {
-      width: 100%;
-  }
-
-  button {
-      font-size: 14px;
-      padding: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-      width: 95%;
-      padding: 10px;
-  }
-
-  h1 {
-      font-size: 1.5em;
-  }
-
-  .blob {
-      width: 300px;
-      height: 350px;
-  }
-
-  input {
-      width: 100%;
-      padding: 10px;
-  }
-
-  button {
-      font-size: 14px;
-      padding: 15px;
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
 }
