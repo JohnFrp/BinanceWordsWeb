@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
   padding: 15px;
   background: #fff;
@@ -26,7 +26,8 @@ label {
 }
 
 input {
-  width: 97%;
+  width: 100%;
+  box-sizing: border-box; /* Ensure consistent width calculation */
   padding: 8px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -54,15 +55,17 @@ button:hover {
   border: 1px solid #ddd;
   background: #f9f9f9;
   border-radius: 4px;
-  max-height: 300px;
+  max-height: 500px;
   overflow-y: auto;
 }
 
-/* From Uiverse.io by dylanharriscameron */ 
+/* Card and related elements */
 .card {
   position: relative;
-  width: 600px;
-  height: 700px;
+  width: 100%; /* Full width by default */
+  max-width: 700px; /* Limit max width */
+  height: auto;
+  aspect-ratio: 5 / 7; /* Maintain aspect ratio */
   border-radius: 14px;
   z-index: 1111;
   overflow: hidden;
@@ -71,17 +74,16 @@ button:hover {
   align-items: center;
   justify-content: center;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  ;
 }
 
 .bg {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 590px;
-  height: 690px;
+  width: calc(100% - 10px); /* Adjust for padding */
+  height: calc(100% - 10px);
   z-index: 2;
-  background: rgba(255, 255, 255, .95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(24px);
   border-radius: 10px;
   overflow: hidden;
@@ -93,8 +95,10 @@ button:hover {
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 600px;
-  height: 650px;
+  width: 90%; /* Adjust size for responsiveness */
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: #ff0000;
   opacity: 1;
@@ -102,24 +106,49 @@ button:hover {
   animation: blob-bounce 5s infinite ease;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .blob {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  .card {
+    max-width: 100%; /* Full width on very small screens */
+    min-height: 1000px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .blob {
+    width: 70%; /* Further reduce size for smaller screens */
+  }
+}
+
 @keyframes blob-bounce {
   0% {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
-
   25% {
     transform: translate(-100%, -100%) translate3d(100%, 0, 0);
   }
-
   50% {
     transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
   }
-
   75% {
-    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-}
